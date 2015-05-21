@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tns="http://service.candystore.atf.com/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="CandyOrderSOAPServiceService" targetNamespace="http://service.candystore.atf.com/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xs:schema elementFormDefault="unqualified" targetNamespace="http://service.candystore.atf.com/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:element name="createCandyOrder" type="tns:createCandyOrder" />
+      <xs:element name="createCandyOrderResponse" type="tns:createCandyOrderResponse" />
+      <xs:element name="deleteCandyOrder" type="tns:deleteCandyOrder" />
+      <xs:element name="deleteCandyOrderResponse" type="tns:deleteCandyOrderResponse" />
+      <xs:complexType name="createCandyOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderRequest" type="tns:orderPogo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderPogo">
+        <xs:sequence>
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="orderLines" type="tns:orderLinePogo" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="orderLinePogo">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sku" type="xs:string" />
+          <xs:element name="quantity" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="createCandyOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderResponse" type="tns:candyOrder" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="candyOrder">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="orderTotal" type="xs:decimal" />
+          <xs:element minOccurs="0" maxOccurs="unbounded" name="orderLines" type="tns:candyOrderLine" />
+        </xs:sequence>
+        <xs:attribute name="id" type="xs:long" use="required" />
+      </xs:complexType>
+      <xs:complexType name="candyOrderLine">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="candy" type="tns:candy" />
+          <xs:element name="quantity" type="xs:long" />
+          <xs:element minOccurs="0" name="priceXUnit" type="xs:decimal" />
+          <xs:element minOccurs="0" name="total" type="xs:decimal" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="candy">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="sku" type="xs:string" />
+          <xs:element minOccurs="0" name="candyName" type="xs:string" />
+          <xs:element name="currentQuantity" type="xs:long" />
+          <xs:element minOccurs="0" name="candyPrice" type="xs:decimal" />
+          <xs:element minOccurs="0" name="pictureUrl" type="xs:string" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteCandyOrder">
+        <xs:sequence>
+          <xs:element name="orderNumber" type="xs:long" />
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="deleteCandyOrderResponse">
+        <xs:sequence>
+          <xs:element minOccurs="0" name="responseMessage" type="xs:anyType" />
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+  </wsdl:types>
+  <wsdl:message name="createCandyOrderResponse">
+    <wsdl:part name="parameters" element="tns:createCandyOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="deleteCandyOrder">
+    <wsdl:part name="parameters" element="tns:deleteCandyOrder" />
+  </wsdl:message>
+  <wsdl:message name="createCandyOrder">
+    <wsdl:part name="parameters" element="tns:createCandyOrder" />
+  </wsdl:message>
+  <wsdl:message name="deleteCandyOrderResponse">
+    <wsdl:part name="parameters" element="tns:deleteCandyOrderResponse" />
+  </wsdl:message>
+  <wsdl:portType name="CandyOrderSOAPService">
+    <wsdl:operation name="createCandyOrder">
+      <wsdl:input name="createCandyOrder" message="tns:createCandyOrder" />
+      <wsdl:output name="createCandyOrderResponse" message="tns:createCandyOrderResponse" />
+    </wsdl:operation>
+    <wsdl:operation name="deleteCandyOrder">
+      <wsdl:input name="deleteCandyOrder" message="tns:deleteCandyOrder" />
+      <wsdl:output name="deleteCandyOrderResponse" message="tns:deleteCandyOrderResponse" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="CandyOrderSOAPServiceServiceSoapBinding" type="tns:CandyOrderSOAPService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="createCandyOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="createCandyOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="createCandyOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="deleteCandyOrder">
+      <soap:operation soapAction="" style="document" />
+      <wsdl:input name="deleteCandyOrder">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="deleteCandyOrderResponse">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="CandyOrderSOAPServiceService">
+    <wsdl:port name="CandyOrderSOAPServicePort" binding="tns:CandyOrderSOAPServiceServiceSoapBinding">
+      <soap:address location="http://192.168.1.111:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

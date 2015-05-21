@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<orders>
+  <order>
+    <orderline>
+      <sku>000000001</sku>
+      <quantity>1</quantity>
+    </orderline>
+    <orderline>
+      <sku>000000002</sku>
+      <quantity>2</quantity>
+    </orderline>
+    <ordertotal>1.8</ordertotal>
+  </order>
+  <order>
+    <orderline>
+      <sku>000000003</sku>
+      <quantity>1</quantity>
+    </orderline>
+    <orderline>
+      <sku>000000004</sku>
+      <quantity>2</quantity>
+    </orderline>
+    <ordertotal>2.15</ordertotal>
+  </order>
+</orders>

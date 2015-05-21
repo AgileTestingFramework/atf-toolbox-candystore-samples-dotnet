@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<CalculatorData xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Person>
+    <LastName>Jones</LastName>
+    <FirstName>Bill</FirstName>
+    <Age>24</Age>
+  </Person>
+  <Person>
+    <LastName>West</LastName>
+    <FirstName>John</FirstName>
+    <Age>24</Age>
+  </Person>
+  <Person>
+   <LastName>Jones</LastName>
+   <FirstName>Bill</FirstName>
+   <Age>24</Age>
+  </Person>
+</CalculatorData>
