@@ -10,7 +10,7 @@ namespace CandyStore.ScreenObjects
         /** Create all screen object constants here for easy access **/
         public static string CALCULATOR = "calculator";
         public static string DESKTOP = "desktop";
-        
+        public static string TEMPERATURE = "temperature";
 
         private ScreenObjectFactory() { }
         
@@ -32,7 +32,7 @@ namespace CandyStore.ScreenObjects
                     // Lazily create new instance of the page object
                     if (screenObjectType == CALCULATOR) { instance = new CalculatorScreen(); }
                     else if (screenObjectType == DESKTOP) { instance = new DesktopScreen(); }
-
+                    else if (screenObjectType == TEMPERATURE) { instance = new TemperatureScreen(); }
 
                     // Add it to map   
                     instances.Add(screenObjectType, instance);
@@ -43,6 +43,8 @@ namespace CandyStore.ScreenObjects
         
             return instance;
         }
+
+        
     }
 }
 

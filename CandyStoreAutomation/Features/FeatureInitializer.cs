@@ -1,7 +1,9 @@
 ﻿using atf.toolbox;
 using CandyStore;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using OpenQA.Selenium;
 using System.Configuration;
+using System.Drawing.Imaging;
 using TechTalk.SpecFlow;
 
 namespace CandyStoreAutomation.Features
@@ -23,6 +25,23 @@ namespace CandyStoreAutomation.Features
         {
             // Used so that a feature steps class can get an instance of the MSTest Context
             TestContext = context;
+        }
+
+        [AfterScenario]
+        public void TakeScreenshotOnFailure()
+        {
+            // Take screen shot on failure if the web test had a failure
+            ITakesScreenshot screenShot = null;
+
+            if (ATFHandler.Instance.IsWebAutomationActive) { screenShot = ATFHandler.Instance.WebAutomation.TakesScreenShot; }
+            else if (ATFHandler.Instance.IsMobileAutomationActive) { screenShot = ATFHandler.Instance.MobileAutomation.TakesScreenShot;  }
+
+            if (screenShot !=null && ScenarioContext.Current.TestError != null)
+            {
+                screenShot.GetScreenshot().SaveAsFile(
+                    ATFHandler.Instance.ReportConfiguration.ScreenshotDirectory +
+                    ScenarioContext.Current.ScenarioInfo.Title + ".png", ImageFormat.Png);
+            }
         }
 
         [AfterTestRun]

@@ -3,26 +3,27 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore", ".\CandyStore\CandyStore.csproj", "{0ED51EBD-E1A7-4D30-AE6E-A8DC59342470}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore", "CandyStore\CandyStore.csproj", "{0ED51EBD-E1A7-4D30-AE6E-A8DC59342470}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStoreAutomation", ".\CandyStoreAutomation\CandyStoreAutomation.csproj", "{25AAE314-1D79-4D2C-96A3-2F6F36E84BAC}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStoreAutomation", "CandyStoreAutomation\CandyStoreAutomation.csproj", "{25AAE314-1D79-4D2C-96A3-2F6F36E84BAC}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "testRunConfiguration", "testRunConfiguration", "{8E9E8F05-AC14-4BD0-8AFC-E3657B64C2E2}"
 	ProjectSection(SolutionItems) = preProject
-		.\testRunConfiguration\formSettings.config = .\testRunConfiguration\formSettings.config
-		.\testRunConfiguration\mobileSettings.config = .\testRunConfiguration\mobileSettings.config
-		.\testRunConfiguration\reportSettings.config = .\testRunConfiguration\reportSettings.config
-		.\testRunConfiguration\webDriverSettings.config = .\testRunConfiguration\webDriverSettings.config
-		.\testRunConfiguration\webSettings.config = .\testRunConfiguration\webSettings.config
+		testRunConfiguration\mobileSettings.config = testRunConfiguration\mobileSettings.config
+		testRunConfiguration\reportSettings.config = testRunConfiguration\reportSettings.config
+		testRunConfiguration\webDriverSettings.config = testRunConfiguration\webDriverSettings.config
+		testRunConfiguration\webSettings.config = testRunConfiguration\webSettings.config
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWPF", ".\CalculatorWPF\CalculatorWPF.csproj", "{54027CA3-96F1-42BA-82E2-71D6755B7575}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CalculatorWPF", "CalculatorWPF\CalculatorWPF.csproj", "{54027CA3-96F1-42BA-82E2-71D6755B7575}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{5622AAE8-D0EB-4012-9683-60FA019D7771}"
 	ProjectSection(SolutionItems) = preProject
-		.\lib\atf.toolbox.dll = .\lib\atf.toolbox.dll
-		.\lib\atf.toolbox.pdb = .\lib\atf.toolbox.pdb
+		lib\atf.toolbox.dll = lib\atf.toolbox.dll
+		lib\atf.toolbox.pdb = lib\atf.toolbox.pdb
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConverterWinForm", "Converter\ConverterWinForm.csproj", "{FF38C0E6-25A9-4BDF-823B-71958103637E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -42,6 +43,10 @@ Global
 		{54027CA3-96F1-42BA-82E2-71D6755B7575}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{54027CA3-96F1-42BA-82E2-71D6755B7575}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{54027CA3-96F1-42BA-82E2-71D6755B7575}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF38C0E6-25A9-4BDF-823B-71958103637E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF38C0E6-25A9-4BDF-823B-71958103637E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF38C0E6-25A9-4BDF-823B-71958103637E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF38C0E6-25A9-4BDF-823B-71958103637E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

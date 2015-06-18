@@ -40,15 +40,11 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\lib\atf.toolbox.dll</HintPath>
     </Reference>
-    <Reference Include="Castle.Core, Version=3.3.0.0, Culture=neutral, PublicKeyToken=407dd0808d44fbdc, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CandyStore\packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
-    </Reference>
     <Reference Include="FluentAssertions">
-      <HintPath>..\CandyStore\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.dll</HintPath>
+      <HintPath>..\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="FluentAssertions.Core">
-      <HintPath>..\CandyStore\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.Core.dll</HintPath>
+      <HintPath>..\packages\FluentAssertions.3.3.0\lib\net45\FluentAssertions.Core.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -73,15 +69,11 @@
     <Reference Include="TechTalk.SpecFlow">
       <HintPath>..\CandyStore\packages\SpecFlow.1.9.0\lib\net35\TechTalk.SpecFlow.dll</HintPath>
     </Reference>
-    <Reference Include="TestStack.White, Version=0.13.0.0, Culture=neutral, PublicKeyToken=2672efbf3e161801, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\CandyStore\packages\TestStack.White.0.13.3\lib\net40\TestStack.White.dll</HintPath>
-    </Reference>
     <Reference Include="WebDriver">
-      <HintPath>..\CandyStore\packages\Selenium.WebDriver.2.45.0\lib\net40\WebDriver.dll</HintPath>
+      <HintPath>..\packages\Selenium.WebDriver.2.45.0\lib\net40\WebDriver.dll</HintPath>
     </Reference>
     <Reference Include="WebDriver.Support">
-      <HintPath>..\CandyStore\packages\Selenium.Support.2.45.0\lib\net40\WebDriver.Support.dll</HintPath>
+      <HintPath>..\packages\Selenium.Support.2.45.0\lib\net40\WebDriver.Support.dll</HintPath>
     </Reference>
   </ItemGroup>
   <Choose>
@@ -97,6 +89,12 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Features\Converter\TemperatureConversion.feature.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TemperatureConversion.feature</DependentUpon>
+    </Compile>
+    <Compile Include="Features\Converter\TemperatureConversionSteps.cs" />
     <Compile Include="Service References\CandyStore_OrderCandyService\Reference.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -159,6 +157,10 @@
     <Content Include="CandyStoreCreateOrderData.xml">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <None Include="Features\Converter\TemperatureConversion.feature">
+      <Generator>SpecFlowSingleFileGenerator</Generator>
+      <LastGenOutput>TemperatureConversion.feature.cs</LastGenOutput>
+    </None>
     <None Include="Service References\CandyStore_OrderCandyService\CandyStoreAutomation.CandyStore_OrderCandyService.candyOrder.datasource">
       <DependentUpon>Reference.svcmap</DependentUpon>
     </None>
@@ -201,6 +203,9 @@
     </Content>
     <None Include="packages.config" />
     <None Include="Service References\CandyStore_OrderCandyService\CandyOrderSOAPServiceService.wsdl" />
+    <Content Include="test.runsettings">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

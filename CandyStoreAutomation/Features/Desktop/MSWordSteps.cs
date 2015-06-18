@@ -21,14 +21,14 @@ namespace CandyStoreAutomation.Features.Desktop
          **/
         private static DesktopScreen _desktopScreen;
 
-        [BeforeFeature("ImageAutomation")]
-        public static void FeatureSetup()
+        [BeforeScenario("ImageAutomation")]
+        public static void ScenarioSetup()
         {
             _desktopScreen = (DesktopScreen)ScreenObjectFactory.Instance(ScreenObjectFactory.DESKTOP);
         }
 
-        [AfterFeature("ImageAutomation")]
-        public static void FeatureTeardown()
+        [AfterScenario("ImageAutomation")]
+        public static void ScenarioTeardown()
         {
             if (_desktopScreen.IsMSWordOpened())
                 _desktopScreen.ClickClose();

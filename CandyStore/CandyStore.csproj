@@ -40,17 +40,17 @@
       <HintPath>packages\Castle.Core.3.3.0\lib\net45\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="Ionic.Zip">
-      <HintPath>packages\SikuliIntegrator.1.1.0\lib\Ionic.Zip.dll</HintPath>
+      <HintPath>..\packages\SikuliIntegrator.1.1.0\lib\Ionic.Zip.dll</HintPath>
     </Reference>
     <Reference Include="SikuliModule">
-      <HintPath>packages\SikuliIntegrator.1.1.0\lib\SikuliModule.dll</HintPath>
+      <HintPath>..\packages\SikuliIntegrator.1.1.0\lib\SikuliModule.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing">
       <Private>True</Private>
-      <HintPath>packages\SikuliIntegrator.1.1.0\lib\System.Drawing.dll</HintPath>
+      <HintPath>..\packages\SikuliIntegrator.1.1.0\lib\System.Drawing.dll</HintPath>
     </Reference>
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Extensions" />
@@ -82,6 +82,7 @@
     <Compile Include="ScreenObjects\PatternConstants.cs" />
     <Compile Include="ScreenObjects\ScreenObjectFactory.cs" />
     <Compile Include="PageObjects\GoogleSearch.cs" />
+    <Compile Include="ScreenObjects\TemperatureScreen.cs" />
     <Compile Include="WebSettings.cs" />
   </ItemGroup>
   <ItemGroup>

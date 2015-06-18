@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using FluentAssertions;
+using System.Configuration;
+using atf.toolbox.configuration;
 
 namespace CandyStoreAutomation.Tests.Forms
 {
@@ -21,12 +23,6 @@ namespace CandyStoreAutomation.Tests.Forms
         public static void ClassSetup(TestContext context)
         {
             _calculatorScreen = (CalculatorScreen)ScreenObjectFactory.Instance(ScreenObjectFactory.CALCULATOR);
-        }
-
-        [ClassCleanup]
-        public static void ClassTeardown()
-        {
-            ATFHandler.Instance.TearDown();
         }
 
         [TestMethod]
@@ -58,7 +54,6 @@ namespace CandyStoreAutomation.Tests.Forms
             Excel 2007 Macro-enabled workbook (.xlsm)          "Excel 12.0 Macro"
             Excel 2007 Non-XML binary workbook (.xlsb)          "Excel 12.0"
              **/
-
             _calculatorScreen.EnterNumberIntoCalculator(Convert.ToInt32(TestContext.DataRow["FirstNumber"]));
             _calculatorScreen.MultiplyClick();
             _calculatorScreen.EnterNumberIntoCalculator(Convert.ToInt32(TestContext.DataRow["SecondNumber"]));

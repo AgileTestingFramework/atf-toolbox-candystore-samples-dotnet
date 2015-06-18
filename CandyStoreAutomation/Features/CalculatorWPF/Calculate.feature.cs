@@ -74,9 +74,11 @@ namespace CandyStoreAutomation.Features.CalculatorWPF
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("frm Add 50 and 70 numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Calculate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         public virtual void FrmAdd50And70Numbers()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("frm Add 50 and 70 numbers", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("frm Add 50 and 70 numbers", new string[] {
+                        "FormApplication"});
 #line 9
 this.ScenarioSetup(scenarioInfo);
 #line 10
@@ -97,20 +99,26 @@ this.ScenarioSetup(scenarioInfo);
         
         public virtual void FrmAdd2Numbers(string firstNumber, string secondNumber, string sum, string paperOutput, string[] exampleTags)
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("frm Add 2 numbers", exampleTags);
-#line 17
-this.ScenarioSetup(scenarioInfo);
+            string[] @__tags = new string[] {
+                    "FormApplication"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("frm Add 2 numbers", @__tags);
 #line 18
- testRunner.Given(string.Format("I have enetered a first number {0}", firstNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
+this.ScenarioSetup(scenarioInfo);
 #line 19
- testRunner.And("I have pressed the add sign", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.Given(string.Format("I have enetered a first number {0}", firstNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Given ");
 #line 20
- testRunner.And(string.Format("I have entered a second number {0}", secondNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
+ testRunner.And("I have pressed the add sign", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 21
- testRunner.When("I press the equal sign", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.And(string.Format("I have entered a second number {0}", secondNumber), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line 22
- testRunner.Then(string.Format("the sum should be {0}", sum), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.When("I press the equal sign", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line 23
+ testRunner.Then(string.Format("the sum should be {0}", sum), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line 24
  testRunner.And(string.Format("the running paper should show {0}", paperOutput), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "And ");
 #line hidden
             this.ScenarioCleanup();
@@ -119,6 +127,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("frm Add 2 numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Calculate")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "1")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "1")]
@@ -134,6 +143,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("frm Add 2 numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Calculate")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "3")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:secondNumber", "4")]
@@ -147,6 +157,7 @@ this.ScenarioSetup(scenarioInfo);
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
         [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("frm Add 2 numbers")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Calculate")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("FormApplication")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("VariantName", "56")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("Parameter:firstNumber", "56")]

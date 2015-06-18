@@ -10,3 +10,9 @@ Scenario: web Submit more than maximum (25) characters allowed for first name
 	And I have entered my first name "Kristen8901234567890123456"
 	When I complete my entry
 	Then I expect my first name not to have exceeded the maximum length of 25
+
+Scenario: web Submit more than maximum (25) characters allowed for first name failure
+	Given I have entered to the Candy Store website and navigated to the Contact Us page
+	And I have entered my first name "Abcdefghijklmnopqrstuvwxyz"
+	When I complete my entry
+	Then I expect my first name not to have exceeded the maximum length of 25

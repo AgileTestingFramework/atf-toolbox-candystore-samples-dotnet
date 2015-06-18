@@ -1,5 +1,6 @@
 ﻿using atf.toolbox;
 using SikuliModule;
+using System;
 
 namespace CandyStore.ScreenObjects
 {
@@ -14,8 +15,16 @@ namespace CandyStore.ScreenObjects
         {
             bool isOpened = false;
 
-            if (SikuliAction.Exists(PatternConstants.MSWORD_LANDINGPAGE,.095f, AtfConstant.WAIT_TIME_MEDIUM) != null)
-            isOpened = true;
+            try
+            {
+                if (SikuliAction.Exists(PatternConstants.MSWORD_LANDINGPAGE, 1.0f, AtfConstant.WAIT_TIME_MEDIUM) != null)
+                    isOpened = true;
+            }
+            catch (Exception ex)
+            {
+                if (ex.Message.Contains("There is no matching element")) isOpened = false;
+                else throw ex;
+            }
 
             return isOpened;
         }

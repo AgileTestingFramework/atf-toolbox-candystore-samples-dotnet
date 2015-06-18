@@ -71,12 +71,12 @@ namespace CandyStoreAutomation.Features.Website
         }
         
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestMethodAttribute()]
-        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("mob Search for automation information")]
+        [Microsoft.VisualStudio.TestTools.UnitTesting.DescriptionAttribute("mobile Search for automation information")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute("FeatureTitle", "Google")]
         [Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute("MobileApplication")]
-        public virtual void MobSearchForAutomationInformation()
+        public virtual void MobileSearchForAutomationInformation()
         {
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("mob Search for automation information", ((string[])(null)));
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("mobile Search for automation information", ((string[])(null)));
 #line 8
 this.ScenarioSetup(scenarioInfo);
 #line 9

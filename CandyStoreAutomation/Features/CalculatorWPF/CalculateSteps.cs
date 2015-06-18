@@ -5,6 +5,9 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System;
 using System.Data;
+using System.Configuration;
+using atf.toolbox.configuration;
+using atf.toolbox;
 
 namespace CandyStoreAutomation.Features.CalculatorWPF
 {
@@ -16,11 +19,11 @@ namespace CandyStoreAutomation.Features.CalculatorWPF
 
         private static CalculatorScreen _calculatorScreen;
 
-        [BeforeFeature("FormApplication")]
-        public static void BeforeScenarioSetup()
+        [BeforeScenario("FormApplication")]
+        public static void BeforeFeatureSetup()
         {
-            TestContext = FeatureInitializer.TestContext;
             _calculatorScreen = (CalculatorScreen)ScreenObjectFactory.Instance(ScreenObjectFactory.CALCULATOR);
+            TestContext = FeatureInitializer.TestContext;           
         }
 
         [Given(@"I have entered fifty ""(.*)"" into the calculator")]

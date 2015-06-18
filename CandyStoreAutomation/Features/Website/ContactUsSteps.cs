@@ -1,6 +1,9 @@
 ﻿using CandyStore.PageObjects;
 using TechTalk.SpecFlow;
 using FluentAssertions;
+using atf.toolbox;
+using OpenQA.Selenium;
+using System.Drawing.Imaging;
 
 namespace CandyStoreAutomation.Features.Website
 {

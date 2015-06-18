@@ -5,7 +5,7 @@ Feature: Google
 	I want to navigate the internet
 	So that I can find items I am needing information about
 
-Scenario: mob Search for automation information
+Scenario: mobile Search for automation information
 	Given I have opened a browser to "https://www.google.com"
 	When I search for "Agile Testing Framework"
 	Then I expect my search results to contain "Agile Testing Framework (ATF)"
