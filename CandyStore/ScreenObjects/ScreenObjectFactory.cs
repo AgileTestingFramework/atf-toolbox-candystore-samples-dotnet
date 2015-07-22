@@ -31,7 +31,6 @@ namespace CandyStore.ScreenObjects
                 {
                     // Lazily create new instance of the page object
                     if (screenObjectType == CALCULATOR) { instance = new CalculatorScreen(); }
-                    else if (screenObjectType == DESKTOP) { instance = new DesktopScreen(); }
                     else if (screenObjectType == TEMPERATURE) { instance = new TemperatureScreen(); }
 
                     // Add it to map   
