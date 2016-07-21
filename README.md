@@ -10,7 +10,7 @@ This README would normally document whatever steps are necessary to get your app
 
 ### How do I get set up? ###
 1. Delete your dotNet Candy Store reference implementation completely from your drive
-2. Open VS2013 Community
+2. Open VS2015 Community
 3. Open Team Explorer (Team->Connect To Team Foundation Explorer)
 3. Add new Git Local (Clone Link, Fill in URL from bitbucket and the harddrive location you want it to 'git' to)
 4. Wait a super long time for it to bring it all down

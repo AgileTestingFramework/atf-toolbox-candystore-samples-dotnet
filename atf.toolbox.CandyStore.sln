@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CandyStore", "CandyStore\CandyStore.csproj", "{0ED51EBD-E1A7-4D30-AE6E-A8DC59342470}"
 EndProject
@@ -24,34 +24,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{77A72A
 		.nuget\NuGet.Config = .nuget\NuGet.Config
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 		.nuget\NuGet.targets = .nuget\NuGet.targets
-	EndProjectSection
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "lib", "lib", "{FFF9072E-FAB1-490D-B2FA-297692B01603}"
-	ProjectSection(SolutionItems) = preProject
-		lib\appium-dotnet-driver.dll = lib\appium-dotnet-driver.dll
-		lib\atf.toolbox.dll = lib\atf.toolbox.dll
-		lib\atf.toolbox.dll.config = lib\atf.toolbox.dll.config
-		lib\atf.toolbox.pdb = lib\atf.toolbox.pdb
-		lib\Castle.Core.dll = lib\Castle.Core.dll
-		lib\Castle.Core.xml = lib\Castle.Core.xml
-		lib\FluentAssertions.Core.dll = lib\FluentAssertions.Core.dll
-		lib\FluentAssertions.Core.pdb = lib\FluentAssertions.Core.pdb
-		lib\FluentAssertions.Core.xml = lib\FluentAssertions.Core.xml
-		lib\FluentAssertions.dll = lib\FluentAssertions.dll
-		lib\FluentAssertions.pdb = lib\FluentAssertions.pdb
-		lib\FluentAssertions.xml = lib\FluentAssertions.xml
-		lib\JSErrorCollector.dll = lib\JSErrorCollector.dll
-		lib\log4net.dll = lib\log4net.dll
-		lib\log4net.xml = lib\log4net.xml
-		lib\Newtonsoft.Json.dll = lib\Newtonsoft.Json.dll
-		lib\Newtonsoft.Json.xml = lib\Newtonsoft.Json.xml
-		lib\TestStack.White.dll = lib\TestStack.White.dll
-		lib\TestStack.White.pdb = lib\TestStack.White.pdb
-		lib\TestStack.White.xml = lib\TestStack.White.xml
-		lib\WebDriver.dll = lib\WebDriver.dll
-		lib\WebDriver.Support.dll = lib\WebDriver.Support.dll
-		lib\WebDriver.Support.xml = lib\WebDriver.Support.xml
-		lib\WebDriver.xml = lib\WebDriver.xml
 	EndProjectSection
 EndProject
 Global
