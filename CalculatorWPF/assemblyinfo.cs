@@ -11,9 +11,9 @@ using System.Runtime.CompilerServices;
 [assembly: AssemblyTitle("AvalonCalculator2")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("Agile Testing Framework")]
 [assembly: AssemblyProduct("AvalonCalculator2")]
-[assembly: AssemblyCopyright("Copyright @  2004")]
+[assembly: AssemblyCopyright("Copyright © Agile Testing Framework 2016")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -26,4 +26,5 @@ using System.Runtime.CompilerServices;
 //
 // You can specify all the values or you can default the Revision and Build Numbers 
 // by using the '*' as shown below:
-[assembly: AssemblyVersion("1.0.*")]
+[assembly: AssemblyVersion("5.0.1.0")]
+[assembly: AssemblyFileVersion("5.0.1.0")]
