@@ -19,10 +19,10 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://192.168.1.111:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://54.173.199.137:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="CandyOrderSOAPServiceService.wsdl" MetadataType="Wsdl" ID="2cab11d9-4df2-4b43-af10-149526ecce30" SourceId="1" SourceUrl="http://192.168.1.111:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP?wsdl" />
+    <MetadataFile FileName="CandyOrderSOAPServiceService.wsdl" MetadataType="Wsdl" ID="2cab11d9-4df2-4b43-af10-149526ecce30" SourceId="1" SourceUrl="http://54.173.199.137:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
