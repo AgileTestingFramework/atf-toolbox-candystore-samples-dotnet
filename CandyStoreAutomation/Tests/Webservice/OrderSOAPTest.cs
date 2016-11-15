@@ -12,7 +12,7 @@ namespace CandyStoreAutomation.Tests.Webservice
 {
     /// <summary>
     /// OrderSOAPTest
-    /// 1. Add a Service Reference to your project http://54.173.199.137:8080/CandyStore-0.0.3/services/candyStoreOrderSOAP?wsdl
+    /// 1. Add a Service Reference to your project http://localhost:8080/CandyStore/services/candyStoreOrderSOAP?wsdl
     /// 2. Select the service(s) you want to test
     /// 3. The service client classes will be added to a Service References folder within your project
     /// 4. Use the client classes generated to test your service
