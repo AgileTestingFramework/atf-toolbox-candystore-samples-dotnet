@@ -40,7 +40,7 @@ namespace CandyStoreAutomation.Features
             {
                 screenShot.GetScreenshot().SaveAsFile(
                     ATFHandler.Instance.ReportConfiguration.ScreenshotDirectory +
-                    ScenarioContext.Current.ScenarioInfo.Title + ".png", ImageFormat.Png);
+                    ScenarioContext.Current.ScenarioInfo.Title + ".png", ScreenshotImageFormat.Png);
             }
         }
 
